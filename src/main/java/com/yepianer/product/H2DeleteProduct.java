@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class H2DeleteProduct {
-    private static final String DELETE_TABLE_SQL = "delete from products where id = 1";
+    private static final String DELETE_TABLE_SQL = "delete from products where productid = 1";
 
     public static void main(String[] args) throws SQLException {
         H2DeleteProduct deleteProduct = new H2DeleteProduct();

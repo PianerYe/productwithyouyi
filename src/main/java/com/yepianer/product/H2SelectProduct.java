@@ -13,7 +13,7 @@ public class H2SelectProduct {
     public static void main(String[] args) {
         try (Connection connection = H2JDBCUtils.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY);){
-            preparedStatement.setInt(1,1);
+            preparedStatement.setInt(1,11);
             System.out.println(preparedStatement);
 
             ResultSet rs = preparedStatement.executeQuery();
