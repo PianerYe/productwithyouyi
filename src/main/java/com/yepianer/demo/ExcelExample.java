@@ -13,17 +13,18 @@ import java.util.Map;
 public class ExcelExample {
 
     public static void main(String[] args) {
-        //s
         String fileName = "D:\\java\\javafx\\demo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
-        List<Map<Integer, String>> productinfo = EasyExcelUtil.syncRead(fileName);
-        System.out.println(productinfo);
-        ArrayList<ProductInfo> producatInfoes= new ArrayList<>();
-
-        for (Map<Integer,String> row : productinfo ){
-            if (row == null || row.isEmpty()) continue;
-
-            ProductInfo productInfo = mapRowToProductInfo(row);
-            producatInfoes.add(productInfo);
+//        //s
+//        String fileName = "D:\\java\\javafx\\demo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
+//        List<Map<Integer, String>> productinfo = EasyExcelUtil.syncRead(fileName);
+//        System.out.println(productinfo);
+//        ArrayList<ProductInfo> producatInfoes= new ArrayList<>();
+//
+//        for (Map<Integer,String> row : productinfo ){
+//            if (row == null || row.isEmpty()) continue;
+//
+//            ProductInfo productInfo = mapRowToProductInfo(row);
+//            producatInfoes.add(productInfo);
 //                ProductInfo productInfo = new ProductInfo();
 
 //            System.out.println(row.toString());
@@ -79,10 +80,26 @@ public class ExcelExample {
 //           producatInfoes.add(productInfo);
 //            System.out.println("输出的对象数组=================" + producatInfoes + "==================");
 
-        }
-        System.out.println(producatInfoes);
+//        }
+//        System.out.println(producatInfoes);
+        List<ProductInfo> productInfos = GetProductInfos(fileName);
+        System.out.println(productInfos);
     }
 
+
+    public static  List<ProductInfo> GetProductInfos (String fileName){
+        List<Map<Integer, String>> productinfo = EasyExcelUtil.syncRead(fileName);
+        System.out.println(productinfo);
+        ArrayList<ProductInfo> producatInfoes= new ArrayList<>();
+
+        for (Map<Integer,String> row : productinfo ) {
+            if (row == null || row.isEmpty()) continue;
+
+            ProductInfo productInfo = mapRowToProductInfo(row);
+            producatInfoes.add(productInfo);
+        }
+        return producatInfoes;
+    }
 
     private static ProductInfo mapRowToProductInfo(Map<Integer, String> row) {
         ProductInfo productInfo = new ProductInfo();
