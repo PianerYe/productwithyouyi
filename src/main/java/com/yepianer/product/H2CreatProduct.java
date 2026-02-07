@@ -21,6 +21,12 @@ public class H2CreatProduct {
             "remarks varchar(255)\r\n" +
             ");";
 
+    private static final String createTableSQLWithProductNameFirst = "create table if not exists productnamefirst ( \r\n" +
+            "namefirstid varchar(20) , \r\n " +
+            "namefirstcode varchar(20) \n" +
+            ");";
+
+
     private static final String deleteTableSQL = "drop table if exists products";
 
     //productimages
