@@ -8,6 +8,7 @@ module com.yepianer.demo {
     requires com.alibaba.fastjson2;
 
 
+
     opens com.yepianer.demo to javafx.fxml;
     exports com.yepianer.demo;
 }
