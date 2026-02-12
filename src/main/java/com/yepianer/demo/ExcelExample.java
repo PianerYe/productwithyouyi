@@ -124,7 +124,7 @@ public class ExcelExample {
                 productId = null;
             }
         }
-        productInfo.setProductId(productId);
+        productInfo.setProductId(String.valueOf(productId));
 
         productInfo.setProductNameFirst(ExcelValueUtils.cellString(row,2));
 

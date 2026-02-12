@@ -58,7 +58,7 @@ public class H2insertProduct {
             for (ProductInfo productInfo : productInfos ) {
                 preparedStatement = connection.prepareStatement(INSERT_PRODUCT_SQL);
                 preparedStatement.setString(1, productInfo.getId());
-                preparedStatement.setInt(2,productInfo.getProductId());
+                preparedStatement.setString(2,productInfo.getProductId());
                 preparedStatement.setString(3,productInfo.getProductNameFirst());
                 preparedStatement.setString(4,productInfo.getProductNameSecond());
                 preparedStatement.setString(5,productInfo.getProductType());

@@ -19,6 +19,8 @@ public class H2DeleteTable {
     //删除产品大类代码表的SQL语句
     public static final String deleteTableSQLWithProductNameFirst = "drop table if exists productnamefirst";
 
+    //删除供应商代码表的SQL语句
+    public static final String deleteTableSQLWithSuppiler = "drop table if exists suppiler";
     //删除主表配表
     public void deleteTableWithProduct() throws SQLException {
         H2ExcuteSqlUtils.executeSql(deleteTableSQLWithProduct);
@@ -27,5 +29,10 @@ public class H2DeleteTable {
     public void deleteTableWithroductNameFirst() throws SQLException{
         H2ExcuteSqlUtils.executeSql(deleteTableSQLWithProductNameFirst);
     }
+    //删除供应商代码表
+    public void DeleteTableSQLWithSuppiler() throws SQLException{
+        H2ExcuteSqlUtils.executeSql(deleteTableSQLWithSuppiler);
+    }
+
 
 }

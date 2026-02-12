@@ -5,7 +5,7 @@ import java.util.Objects;
 public class ProductInfo {
 
     private String id;
-    private int productId;
+    private String productId;
     private String productNameFirst;
     private String productNameSecond;
 
@@ -26,11 +26,11 @@ public class ProductInfo {
         this.id = id;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
