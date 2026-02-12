@@ -18,17 +18,13 @@ public class H2insertProduct {
 
     /*
     *  private int id;
-    private int productId;
+    private String productId;
     private String productNameFirst;
     private String productNameSecond;
-
     private String productType;
     private String productTypeOld;
-
     private String images;
-
     private String supplierName;
-
     private String remarks;
     *
     * */
