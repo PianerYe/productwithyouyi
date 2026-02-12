@@ -14,7 +14,10 @@ public class ExcelExample {
 
     public static void main(String[] args) {
 //        String fileName = "D:\\java\\javafx\\demo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
-        String fileName ="C:\\Users\\Administrator\\Desktop\\yepianer\\productdemo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
+        System.out.println(System.getProperty("user.dir"));
+        String fileName = ".\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
+
+//        String fileName ="C:\\Users\\Administrator\\Desktop\\yepianer\\productdemo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
 //        //s
 //        String fileName = "D:\\java\\javafx\\demo\\src\\main\\java\\com\\yepianer\\excel\\产品表.xlsx";
 //        List<Map<Integer, String>> productinfo = EasyExcelUtil.syncRead(fileName);
